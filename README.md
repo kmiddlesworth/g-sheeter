@@ -10,7 +10,7 @@ $ npm install --save g-sheeter
 ## Setup
 
 * Follow the Service Account [instructions here](https://www.npmjs.com/package/google-spreadsheet#service-account-recommended-method).
-* Make sure to require() your Google-provided service account information, otherwise [refence this](https://www.npmjs.com/package/google-spreadsheet#unauthenticated-access-read-only-access-on-public-docs) and see the "Without Authentication" above. 
+* Make sure to `require()` your Google-provided service account information, otherwise [refence this](https://www.npmjs.com/package/google-spreadsheet#unauthenticated-access-read-only-access-on-public-docs). 
 
 
 ## Examples
@@ -22,7 +22,7 @@ var gSheeter = require('./lib/constructor');
 
 var sheet = gSheeter(
 	'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-	null,
+	null
 );
 
 sheet.getData(
@@ -103,7 +103,7 @@ var options = {
 
 ```
 
-Tab1: Make the `slug` label the key for each row
+Tab1: Make the `slug` label the key for each row  
 Tab2: Make the `slug` label + `index` the key for each row
 ```js
 ...
@@ -122,7 +122,7 @@ var options = {
 ...
 
 ```
-_Note: When using the tab-specific method, be sure to specify for each tab. Otherwise, not all the data will be returned int he callback._
+_Note: When using the tab-specific method, be sure to specify every tab in the options. Otherwise, not all the data will be returned int he callback._
 
 
 
@@ -149,6 +149,6 @@ Main g-sheeter class.
 	* `rowsToObject` - `string` OR `function` OR `object` - Determine how the returning array in the callback shoud be converted into an object instead of the default array
 		* when `string` - builds whole row key from matching row item label
 		* when `function` - builds whole row key from custom function - see example
-		* when 'object' - each key of this object must be `string` or `function`, and the keys supplied should match *ALL* Google Sheet tab names - see example
+		* when 'object' - each key of this object must be `string` or `function`, and the keys supplied should match *ALL* Google Sheet tab names
 
 
