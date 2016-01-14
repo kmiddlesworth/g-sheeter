@@ -1,0 +1,16 @@
+{
+  "product-name": "##section-printers-list-item1-name##",
+  "product-image-name": "section-printers-list-product-m506.png",
+  "product-image-link": "http://store.hp.com/us/en/pdp/hp-laserjet-enterprise-m506dn?jumpid=cp_r163_us/en/ips/secure_printing/entlaserjet/m506dnimg",
+  "product-price": "##section-printers-list-item1-price##",
+  "product-page-rate": "##section-printers-list-item1-page-rate##",
+  "product-button": "##section-printers-list-item1-button##",
+  "product-button-link": "http://store.hp.com/us/en/pdp/hp-laserjet-enterprise-m506dn?jumpid=cp_r163_us/en/ips/secure_printing/entlaserjet/m506dn",
+  "product-details": [{
+    "product-detail": "##section-printers-list-item1-detail1##"
+  }, {
+    "product-detail": "##section-printers-list-item1-detail2##"
+  }, {
+    "product-detail": "##section-printers-list-item1-detail3##"
+  }]
+}

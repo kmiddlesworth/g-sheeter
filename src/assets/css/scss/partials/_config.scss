@@ -1,0 +1,304 @@
+//colors
+$white: #ffffff;
+$black: #000000;
+$primaryBlue:#002E5D;
+$primaryPurple:#642667;
+$secondaryPurple:#7B307F;
+$tertiaryPurple:#DDB0DF;
+$secondaryYellow:#ffcd00;
+$secondaryTeal:#00B9AD;
+$darkGrey:#444444;
+$semiGrey:#636363;
+$lightGrey:#AAAAAA;
+$contentGrey:#6c6c6c;
+$transparent:rgba(0,0,0,0);
+$currentPage: #00B9AD;
+$error: #cc0000;
+
+//default body
+$backgroundColor:#F8F8F8;
+$bodyColor: $black;
+
+//default fonts
+$headingFont:'Lobster', sans-serif;
+$bodyFont: 'Petrona', serif;
+
+//button colors
+$primaryBtnColor: $primaryBlue;
+$secondaryBtnColor: #666;
+$tertiaryBtnColor: #999;
+
+//link colors
+$primaryLinkColor: #666666;
+$secondaryLinkColor:#666666;
+$tertiaryLinkColor: #999999;
+
+//heading colors
+$headingPrimaryColor: $primaryBlue;
+$headingSecondaryColor: $secondaryYellow;
+$headingTertiaryColor:$secondaryYellow;
+
+$adelleSans: "Adelle SansW01-Regular";
+$adelle: "Adelle W01 Regular";
+$adelleSansSemibold:"Adelle SansW01-Semibold";
+$adelleSansItalic:"Adelle SansW01-Italic";
+$adelleItalic:"Adelle W01 Italic";
+$adelleSemibold:"Adelle W01 SemiBold";
+
+// maximum width of the main site content container
+$maxContentWidth: 1280px;
+// maximum width for certain elements like the hero slider
+$wideMaxContentWidth: 1542px;
+
+$font-imports: 'http://fonts.googleapis.com/css?family=Lobster',
+               'http://fonts.googleapis.com/css?family=Petrona';
+
+// place the above breakpoints into a list in order to build scalable font sizes
+$breakpoints: (
+  xs: (
+    min: null,
+    max: 479px
+  ),
+  sm: (
+    min: 480px,
+    max: 767px
+  ),
+  md: (
+    min: 768px,
+    max: 1024px
+  ),
+  lg: (
+    min: 1025px,
+    max: 1279px
+  ),
+  xl: (
+    min: 1280px,
+    max: 1439px
+  ),
+  xxl: (
+    min: 1440px,
+    max: 1919px
+  ),
+  xxxl: (
+    min: 1920px,
+    max: null
+  )
+);
+
+// make a shorthand for accessing $breakpoints
+$bp: $breakpoints;
+
+// The following data will be run through a series of loops incorporating the $breakpoints map above
+// This will create "responsive" solution using breakpoint overrides by increment
+//
+// The following must be ordered from smallest to largest
+//
+// Each main property in the below map will become a class with a "font-" prefix. For example
+//     "xsm" becomes ".font-xsm" in the output css
+//
+//  If "static-size" exists as a key in the map, there will be breakpoints set. This property sets a global font
+//      class to apply to all breakpoints.
+//
+// The number of breakpoints that take place between max-size-bp and min-size-bp depends on the number of intervals set
+// see _fonts.scss
+$font-sizing: (
+    xsm: (
+        max-size 	: 14px,
+        max-size-bp : "xxl",
+        min-size 	: 12px,
+        min-size-bp : "lg",
+        intervals   : 2,
+        line-height: 2,
+        print-size  : 10pt
+    ),
+    sm: (
+        max-size 	: 14px,
+        max-size-bp : "xxl",
+        min-size 	: 14px,
+        min-size-bp : "lg",
+        intervals   : 4,
+        print-size  : 9pt
+    ),
+    med: (
+        max-size 	: 16px,
+        max-size-bp : "xxl",
+        min-size 	: 14px,
+        min-size-bp : "lg",
+        intervals   : 6,
+        line-height : 1.6,
+        print-size  : 10pt
+    ),
+    lg: (
+        max-size 	: 30px,
+        max-size-bp : "xl",
+        min-size 	: 20px,
+        min-size-bp : "lg",
+        intervals   : 10,
+        line-height: 1.2,
+        print-size  : 11pt
+    ),
+    xl: (
+        max-size 	: 40px,
+        max-size-bp : "xxl",
+        min-size 	: 28px,
+        min-size-bp : "lg",
+        intervals   : 10,
+        line-height : 1.1,
+        print-size  : 16pt
+    ),
+    xxlg: (
+        max-size 	: 83px,
+        max-size-bp : "xxxl",
+        min-size 	: 30px,
+        min-size-bp : "lg",
+        intervals   : 10,
+        line-height :1.1,
+        print-size  : 13pt
+    ),
+    banner-lg:(
+        max-size: 140px,
+        max-size-bp: "xxxl",
+        min-size: 70px,
+        min-size-bp:"lg",
+        intervals: 4,
+        line-height: 0.9
+    ),
+    banner-copy:(
+        max-size: 36px,
+        max-size-bp: "xxxl",
+        min-size: 16px,
+        min-size-bp:"lg",
+        intervals: 4,
+        line-height: 0.9,
+        print-size  : 13pt
+    ),
+    navLg: (
+        max-size: 15px,
+        max-size-bp : "xxl",
+        min-size  : 13px,
+        min-size-bp : "lg",
+        line-height: 1.4,
+        intervals: 10
+    ),
+    navSm: (
+        max-size: 14px,
+        max-size-bp : "xxl",
+        min-size  : 13px,
+        min-size-bp : "lg",
+        line-height: 1.4,
+        intervals: 10
+    ),
+    navFoot: (
+        max-size: 13px,
+        max-size-bp : "xxxl",
+        min-size  : 12px,
+        min-size-bp : "lg",
+        line-height: 1.4,
+        intervals: 10
+    ),
+    navCopy: (
+        max-size: 13px,
+        max-size-bp : "xxxl",
+        min-size  : 11px,
+        min-size-bp : "lg",
+        line-height: 1.4,
+        intervals: 10
+    ),
+    searchContent: (
+        max-size:26px,
+        max-size-bp : "xxl",
+        min-size  : 20px,
+        min-size-bp : "lg",
+        line-height: 1.4,
+        intervals: 10
+    ),
+    heroText:(
+        max-size:21px,
+        max-size-bp : "xxl",
+        min-size  : 18px,
+        min-size-bp : "xs",
+        line-height: 1.4,
+        intervals: 4,
+        print-size  : 11pt
+    ),
+    heroTitle:(
+        max-size:44px,
+        max-size-bp : "xxl",
+        min-size  : 30px,
+        min-size-bp : "sm",
+        line-height: 1.4,
+        intervals: 4,
+        print-size  : 13pt
+    ),
+    slider-slider-text:(
+        max-size:21px,
+        max-size-bp : "xxl",
+        min-size  : 14px,
+        min-size-bp : "xs",
+        line-height: 1.4,
+        intervals: 4,
+        print-size  : 11pt
+    ),
+    slider-slider-title:(
+        max-size:35px,
+        max-size-bp : "xxl",
+        min-size  : 18px,
+        min-size-bp : "xs",
+        line-height: 1.2,
+        intervals: 4,
+        print-size  : 13pt
+    ),
+    tile-title: (
+        max-size:30px,
+        max-size-bp : "xxl",
+        min-size  : 24px,
+        min-size-bp : "lg",
+        line-height: 1.4,
+        intervals: 4,
+        print-size  : 12pt
+    ),
+    subtitle: (
+        max-size:30px,
+        max-size-bp : "xxl",
+        min-size  : 24px,
+        min-size-bp : "lg",
+        line-height: 1.2,
+        intervals: 4,
+        print-size  : 11pt
+    ),
+    eyebrow: (
+        max-size  : 14px,
+        max-size-bp : "xxl",
+        min-size  : 12px,
+        min-size-bp : "lg",
+        intervals   : 2,
+        line-height: 1
+    ),
+    sub-text: (
+        max-size  : 21px,
+        max-size-bp : "xxl",
+        min-size  : 17px,
+        min-size-bp : "lg",
+        intervals   : 2,
+        line-height: 1
+    ),
+    link:(
+        max-size  : 14px,
+        max-size-bp : "xxl",
+        min-size  : 12px,
+        min-size-bp : "lg",
+        intervals   : 2,
+        line-height: 1.4
+    ),
+    18px: (
+        static-size : 18px,
+        print-size  : 11pt
+    ),
+    16px: (
+        static-size : 16px,
+        line-height: 26px,
+        print-size  : 10pt
+    )
+ );
+
+

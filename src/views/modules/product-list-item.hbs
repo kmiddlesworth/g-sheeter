@@ -1,0 +1,20 @@
+<div class="product-item">
+  {{#if product-image-link}}
+    <a href="{{product-image-link}}" class="image-product" target="_blank"><img src="{{documentImages.virtualPath}}{{product-image-name}}" alt="{{product-name}}" /></a>
+  {{else}}
+    <div class="image-product"><img src="{{documentImages.virtualPath}}{{product-image-name}}" alt="{{product-name}}" /></div>
+  {{/if}}
+  <h5>{{product-name}}</h5>
+  <div class="price">{{product-price}}</div>
+  <div class="page-rate">{{product-page-rate}}</div>
+  <ul>
+    {{#each product-details}}
+      <li>{{product-detail}}</li>
+    {{/each}}
+  </ul>
+  {{#if product-button-link}}
+    <a href="{{product-button-link}}" class="button secondary" target="_blank">{{product-button}}</a>
+  {{else}}
+    <div class="button secondary">{{product-button}}</div>
+  {{/if}}
+</div>

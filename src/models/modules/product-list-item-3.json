@@ -1,0 +1,16 @@
+{
+  "product-name": "##section-printers-list-item3-name##",
+  "product-image-name": "section-printers-list-product-m577.png",
+  "product-image-link": "",
+  "product-price": "##section-printers-list-item3-price##",
+  "product-page-rate": "##section-printers-list-item3-page-rate##",
+  "product-button": "##section-printers-list-item3-button##",
+  "product-button-link": "",
+  "product-details": [{
+    "product-detail": "##section-printers-list-item3-detail1##"
+  }, {
+    "product-detail": "##section-printers-list-item3-detail2##"
+  }, {
+    "product-detail": "##section-printers-list-item3-detail3##"
+  }]
+}

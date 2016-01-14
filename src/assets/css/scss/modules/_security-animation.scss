@@ -1,0 +1,100 @@
+#security-animation {
+  position: relative;
+
+  // border  : 1px solid blue;
+  width   : 560px;
+  height  : 560px;
+  float   : right;
+
+  img {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+  }
+
+  .label {
+
+    // border: 1px solid aqua;
+    font-family: "HPSimplifiedLight";
+    font-size  : 16px;
+    line-height: 18px;
+    width      : 100%;
+    position   : absolute;
+    text-align : center;
+    top        : 45%;
+    left       : 0;
+
+    &.main {
+      font-size  : 28px;
+      line-height: 30px;
+    }
+
+    &.sub-1 {
+      top: 3%;
+    }
+
+    &.sub-3 {
+      width: 100px;
+      top  : 25%;
+      left : auto;
+      right: 0;
+    }
+
+    &.sub-5 {
+      width: 100px;
+      top  : 70%;
+      left : auto;
+      right: 0;
+    }
+
+    &.sub-7 {
+      top   : auto;
+      bottom: 3%;
+    }
+
+    &.sub-9 {
+      width: 100px;
+      top  : 70%;
+    }
+
+    &.sub-11 {
+      width: 100px;
+      top  : 25%;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    margin-top: -50px;
+  }
+
+  @media (max-width: 799px) {
+    width : 320px;
+    height: 320px;
+    float : initial;
+    margin: 20px auto 0;
+
+    .label {
+      font-size  : 8px;
+      line-height: 9px;
+
+      &.main {
+        font-size  : 14px;
+        line-height: 13px;
+      }
+
+      &.sub-3 {
+        right: -20px;
+      }
+      &.sub-5 {
+        right: -20px;
+      }
+      &.sub-9 {
+        left: -20px;
+      }
+      &.sub-11 {
+        left: -20px;
+      }
+    }
+  }
+}

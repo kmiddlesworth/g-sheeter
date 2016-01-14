@@ -1,0 +1,134 @@
+.section {
+  background: #fff;
+  z-index   : 2;
+}
+
+.header,
+.footer {
+  position: relative;
+  z-index : 3;
+}
+
+.section.hero {
+  position  : fixed;
+  display   : block;
+  height    : 700px;
+  width     : 100%;
+  overflow  : hidden;
+  transition: 0s;
+  z-index   : 1;
+  left      : 0;
+  right     : 0;
+
+  .container {
+    position: relative;
+    height  : 700px;
+
+    .container-background {
+      background: #fff url("@@routes.cssImages@@hero-background.jpg") center bottom no-repeat;
+      height    : 700px;
+    }
+
+    .container-content {
+      position   : absolute;
+      top        : 118px;
+      left       : 50%;
+      margin-left: -580px;
+      width      : auto;
+      font-family: "HPSimplifiedLight";
+      font-size  : 26px;
+      line-height: 30px;
+
+      .body-copy {
+        margin-top: 40px;
+      }
+
+      h2 {
+        font-size  : 55px;
+        line-height: 56px;
+        margin     : 0 0 15px;
+      }
+    }
+  }
+
+  .parallax-tracking {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1279px) {
+    .container {
+
+      .container-background {
+        background: #fff url("@@routes.cssImages@@hero-background.jpg") center bottom no-repeat;
+      }
+
+      .container-content {
+        top: 100px;
+        margin-left: -724px * .5;
+      }
+    }
+  }
+
+  @media (max-width: 799px) {
+    position: relative;
+    height  : 640px;
+    top: 0 !important;
+
+    .container {
+      height: auto;
+      top: 0 !important;
+
+      .container-background {
+        background     : url("@@routes.cssImages@@hero-background-mobile.jpg") center bottom no-repeat;
+        height         : 640px;
+        background-size: cover;
+      }
+
+      .container-content {
+        width      : 90%;
+        top        : 25px;
+        left       : auto;
+        margin     : 0 5%;
+        text-align : center;
+
+        h2 {
+          font-size  : 30px;
+          line-height: 30px;
+        }
+        font-size  : 16px;
+        line-height: 16px;
+      }
+    }
+  }
+  .hero-spacer {
+    display: none;
+  }
+}
+
+.section.hero-spacer {
+  margin-top: 700px;
+  @media (max-width: 799px) {
+    margin-top: 0;
+  }
+}
+.fixedSectionTitle {
+  .section.hero-spacer {
+    margin-top: 780px;
+    @media (max-width: 799px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.non-parallaxable .section.hero {
+  position: relative;
+}
+
+.non-parallaxable .section.hero-spacer {
+  height: 0;
+  margin: 0;
+}

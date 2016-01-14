@@ -1,0 +1,274 @@
+/* helper classes*/
+
+.pull-left{
+    margin-left: 0;
+}
+.pull-right{
+	margin-right:0;
+}
+
+.hidden{
+    display:none!important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.clearfix{
+    @include clearfix;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justified{
+  text-align: justify;
+}
+
+.text-middle {
+  vertical-align: middle;
+}
+
+.text-large{
+	font-size:1.25em;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.float-right{
+  float: right;
+}
+.float-left{
+  float: left;
+}
+
+//image styles
+.image{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    img{
+        float: left;
+        width: 100%;
+        height: auto;
+    }
+    img[src=""]{
+        display: none;
+    }
+}
+.rounded{
+    @extend .image;
+    border-radius: 1em;
+    img{
+        border-radius: 1em;
+    }
+}
+.circle{
+    @extend .image;
+    border-radius: 50%;
+    img{
+        border-radius: 50%;
+    }
+}
+.thumbnail{
+    @extend .image;
+    padding:1%;
+    border:1px solid #eee;
+}
+
+//padding and margins overrides
+
+.margin{
+    margin:1em!important;
+}
+
+.no-margin{
+    margin:0!important;
+}
+.no-margin-top{
+    margin-top:0!important;
+}
+.no-margin-bottom{
+    margin-bottom: 0!important;
+}
+
+.no-margin-bottom-lg{
+    @include bp("min", "lg"){
+        margin-bottom: 0!important;
+    }
+}
+.no-margin-bottom-md{
+    @include bp("min", "md"){
+        margin-bottom: 0!important;
+    }
+}
+
+.margin-top{
+    margin-top:2em!important;
+}
+
+.hide-related-industry ~ .margin-top{
+	margin-top:0!important;
+}
+
+.margin-top-sm{
+    margin-top:1em!important;
+}
+
+.margin-bottom{
+    margin-bottom:2em!important;
+}
+
+.margin-bottom-sm{
+    margin-bottom:1em!important;
+}
+
+.margin-offset-top{
+  margin-top:1.5%;
+  @include bp("min", "md"){
+    margin-top:0.5%;
+  }
+}
+
+.padding-tile{
+  padding-bottom:30%;
+}
+
+.padding{
+    padding:1em!important;
+}
+
+.no-padding{
+    padding:0!important;
+}
+.no-padding-top{
+    padding-top:0!important;
+}
+.no-padding-bottom{
+    padding-bottom:0!important;
+}
+.padding-top{
+    padding-top:2em!important;
+}
+.padding-top-1{
+    padding-top:1em!important;
+}
+.padding-bottom{
+    padding-bottom:2em!important;
+}
+.padding-bottom-1{
+    padding-bottom:1em!important;
+}
+.padding-right{
+    padding-right:2em!important;
+}
+
+.padding-left{
+    padding-left:2em!important;
+}
+.padding-left-min{
+    padding-left:1em!important;
+}
+
+.border-left{
+    border-left:1px solid $darkGrey;
+}
+.border-right{
+    border-right: 1px solid $darkGrey;
+}
+
+.spaced{
+  padding-top:2em;
+  padding-bottom:2em;
+
+  @include bp("min", "md"){
+    padding-top:2.5em;
+    padding-bottom:2.5em;
+  }
+
+  @include bp("min", "lg"){
+    padding-top:3em;
+    padding-bottom:3em;
+  }
+
+  @include bp("min", "xxl"){
+    padding-top:4em;
+    padding-bottom:4em;
+  }
+
+}
+
+//list
+.list-none{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+
+// hide elements helper
+//  - breakpoints above and below a targeted breapoint are ignored
+
+// show elements helper
+//  - breakpoints above and below a targeted breapoint are ignored
+
+[class*='show-'] {
+    display:none !important;
+}
+
+@each $key, $value in $bp {
+
+  $minValue: map-get($value, "min");
+  $maxValue: map-get($value, "max");
+
+  // .show - both values given
+  @if ($minValue) and ($maxValue){
+    @media only screen and (min-width:$minValue) and (max-width: $maxValue){
+      .show-#{$key}{
+        display: inline-block!important;
+        display: initial!important;
+      }
+      .hide-#{$key}{
+        display: none!important;
+      }
+    }
+  }
+
+  // .show - no min given
+  @if ($maxValue) and not($minValue){
+    @media only screen and (max-width:$maxValue){
+      .show-#{$key}{
+        display: inline-block!important;
+        display: initial!important;
+      }
+      .hide-#{$key}{
+        display: none!important;
+      }
+    }
+  }
+
+  // .show - no max given
+  @if not($maxValue) and ($minValue){
+    @media only screen and (min-width:$minValue){
+      .show-#{$key}{
+        display: inline-block!important;
+        display: initial!important;
+      }
+      .hide-#{$key}{
+        display: none!important;
+      }
+    }
+  }
+}

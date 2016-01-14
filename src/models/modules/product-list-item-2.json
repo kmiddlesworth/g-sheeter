@@ -1,0 +1,16 @@
+{
+  "product-name": "##section-printers-list-item2-name##",
+  "product-image-name": "section-printers-list-product-m527.png",
+  "product-image-link": "http://store.hp.com/us/en/pdp/printers/hp-laserjet-enterprise-mfp-m527dn?jumpid=cp_r163_us/en/ips/secure_printing/entlaserjet/m527dnimg",
+  "product-price": "##section-printers-list-item2-price##",
+  "product-page-rate": "##section-printers-list-item2-page-rate##",
+  "product-button": "##section-printers-list-item2-button##",
+  "product-button-link": "http://store.hp.com/us/en/pdp/printers/hp-laserjet-enterprise-mfp-m527dn?jumpid=cp_r163_us/en/ips/secure_printing/entlaserjet/m527dn",
+  "product-details": [{
+    "product-detail": "##section-printers-list-item2-detail1##"
+  }, {
+    "product-detail": "##section-printers-list-item2-detail2##"
+  }, {
+    "product-detail": "##section-printers-list-item2-detail3##"
+  }]
+}

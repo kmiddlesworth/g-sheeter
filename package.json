@@ -1,0 +1,25 @@
+{
+  "name": "g-sheeter",
+  "version": "1.0.0",
+  "description": "Google Sheets update and read tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmiddlesworth/g-sheeter.git"
+  },
+  "author": "Kevin Middlesworth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmiddlesworth/g-sheeter/issues"
+  },
+  "homepage": "https://github.com/kmiddlesworth/g-sheeter#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "google-spreadsheet": "^1.1.3",
+    "lodash": "^3.10.1",
+    "q": "^1.4.1"
+  }
+}

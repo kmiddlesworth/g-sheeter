@@ -1,0 +1,14 @@
+# Logs
+logs
+*.log
+
+## Service creds
+google-creds
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# Example file for dev
+example.js

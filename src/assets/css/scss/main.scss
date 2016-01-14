@@ -1,0 +1,831 @@
+//partial imports
+@import 'partials/partials';
+.media-tablet,
+.media-mobile,
+.media-tablet.media-mobile {
+  display: none;
+}
+.media-desktop,
+.media-desktop.media-tablet,
+.media-desktop.media-mobile {
+  display: block;
+}
+@media (max-width: 1279px) {
+  .media-desktop,
+  .media-mobile,
+  .media-desktop.media-tablet {
+    display: none;
+  }
+  .media-tablet,
+  .media-tablet.media-desktop,
+  .media-tablet.media-mobile {
+    display: block;
+  }
+}
+@media (max-width: 799px) {
+  .media-desktop,
+  .media-tablet,
+  .media-desktop.media-tablet {
+    display: none;
+  }
+  .media-mobile,
+  .media-mobile.media-desktop,
+  .media-mobile.media-tablet {
+    display: block;
+  }
+}
+.everything {
+  font-family: "HPSimplified";
+  .header,
+  .footer {
+    z-index: 5;
+  }
+}
+.container {
+  max-width: none;
+  margin   : 0;
+}
+.section {
+  position: relative;
+  .content {
+    width: 1160px;
+  }
+  @media (max-width: 1279px) {
+    .content {
+      width: 724px;
+    }
+  }
+  @media (max-width: 799px) {
+    .content {
+      width: 100%;
+    }
+  }
+}
+
+//submodule imports
+@import 'submodules/submodules';
+
+//module imports
+@import 'modules/modules';
+
+//module imports
+@import 'browsers/browsers';
+
+// import global modules
+@import 'globals';
+
+// The below should contain css unique to this microsite.
+//
+// TEMPORARY FIX FOR LAYOUT BREAKING
+//
+#body.body {
+  max-width: 100%;
+}
+.section {
+  &.title {
+    display   : inline-block;
+    background: #fff;
+    width     : 100%;
+    z-index   : 4;
+    .content {
+      display      : table;
+      border-bottom: 1px solid #ccc;
+      height       : 60px;
+      padding: 8px 0;
+    }
+    h1 {
+      line-height: 1em;
+      font-weight: normal;
+      font-size  : 32px;
+      margin     : 0;
+      margin     : 14px 0 0;
+    }
+    .content-left {
+      float: left;
+    }
+    .content-right {
+
+      // display: none;
+      float : right;
+
+      // margin: 14px 0;
+      margin: 12px 0 0;
+    }
+    &.fixed {
+      position: fixed;
+      top     : 0;
+      left    : 0;
+      right   : 0;
+      .content-left {
+        display: none;
+      }
+      .content-right {
+
+        // display: block;
+      }
+    }
+  }
+  @media (max-width: 799px) {
+    &.title {
+      display: block;
+
+      // display: none;
+      .content {
+        width : 90%;
+        margin: 0 5%;
+        .content-left {
+          display: block;
+        }
+        .content-right {
+          display: none;
+        }
+      }
+      h1 {
+        margin: 14px 0 10px;
+      }
+      &.fixed {
+        position: relative;
+        top     : auto;
+      }
+    }
+  }
+}
+.section {
+  &.secondary {
+    font-family: "HPSimplifiedLight";
+    font-size  : 16px;
+    line-height: 26px;
+    font-weight: normal;
+    text-align : center;
+    .content {
+      display: inline-block;
+      margin : 50px auto;
+    }
+    .container-content {
+      display       : inline-block;
+      vertical-align: top;
+      width         : 508px;
+      &.content-left,
+      &.content-right {
+        margin: 0 20px;
+      }
+    }
+    h2 {
+      font-size  : 38px;
+      line-height: 40px;
+      font-weight: normal;
+    }
+    h3 {
+      font-size  : 26px;
+      line-height: 30px;
+      font-weight: normal;
+      margin     : 15px 0 25px;
+    }
+    .container-body {
+      text-align: left;
+      width     : 490px;
+    }
+    @media (max-width: 799px) {
+      font-size  : 12px;
+      line-height: 14px;
+      .content {
+        width : 90%;
+        margin: 25px 5%;
+      }
+      .container-content {
+        width: 100%;
+        &.content-left,
+        &.content-right {
+          margin: 0;
+        }
+      }
+      h2 {
+        font-size  : 19px;
+        line-height: 20px;
+      }
+      h3 {
+        font-size  : 12px;
+        line-height: 14px;
+      }
+      .container-body {
+        text-align: center;
+        width     : auto;
+      }
+    }
+  }
+}
+.section {
+  sup {
+    font-size     : 0.6em;
+    vertical-align: top;
+  }
+  .button {
+    font-family: "HPSimplified";
+    font-size  : 17px;
+    line-height: 36px;
+    transition : 0.3s;
+  }
+  div.button {
+    cursor: default;
+    &:hover {
+
+      // background: #d7410b;
+    }
+    &.secondary:hover {
+
+      // background: #0096d6;
+    }
+  }
+  @media (max-width: 799px) {
+    .button {
+      font-size  : 13px;
+      line-height: 27px;
+    }
+  }
+  .video-preview {
+    display       : inline-block;
+    position      : relative;
+    cursor        : pointer;
+    vertical-align: top;
+    font-size     : 18px;
+    line-height   : 22px;
+    img {
+      display: block;
+      width  : 100%;
+    }
+    a:after {
+      content       : '';
+      position      : absolute;
+      top           : 50%;
+      left          : 50%;
+      width         : 66px;
+      height        : 66px;
+      margin        : -33px 0 0 -33px;
+      background    : url("@@routes.cssImages@@icon-video-preview.png") no-repeat;
+      transition    : 0.3s;
+      pointer-events: none;
+    }
+    .timecode {
+      position  : absolute;
+      bottom    : 0;
+      right     : 0;
+      color     : #fff;
+      background: #fff;
+      background: rgba(0,0,0, .5);
+      padding   : 2px 8px;
+      font-size : 14px;
+    }
+    @media (max-width: 799px) {
+      width : 100%;
+      margin: 20px 0;
+      .video-container {
+        display: none;
+      }
+      .playing .video-container-poster {
+        display: none;
+      }
+      .playing .video-container {
+        display : block;
+        height  : 172px;
+        overflow: hidden;
+      }
+      a.playing:after {
+        display: none;
+      }
+      .timecode {
+        font-size: 12px;
+        padding  : 0 6px;
+      }
+    }
+  }
+}
+#hero-main {
+  height: 700px + 72 + 90;
+  .container {
+    height: 700px + 72 + 90;
+    .container-background {
+      background: #fff url("@@routes.cssImages@@hero-background.jpg") center bottom no-repeat;
+      height    : 700px + 72;
+      margin-top: 76px;
+      .overlay-text {
+        color         : #fff;
+        position      : absolute;
+        top           : 348px;
+        left          : 300px;
+        margin-left   : 50%;
+        font-size     : 20px;
+        line-height   : 0.95em;
+        letter-spacing: -0.3px;
+        .large {
+          font-family   : "HPSimplified";
+          font-size     : 80px;
+          line-height   : 1em;
+          font-weight   : bold;
+          margin-left   : -6px;
+          letter-spacing: -3px;
+        }
+      }
+    }
+    .container-content {
+      top: 230px + 72;
+    }
+  }
+  @media (max-width: 1279px) {
+    .container {
+      .container-background {
+        background: #fff url("@@routes.cssImages@@hero-background.jpg") center bottom no-repeat;
+      }
+      .container-content {
+        font-size  : 20px;
+        line-height: 20px;
+        h2 {
+          font-size  : 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  @media (max-width: 799px) {
+    height: 510px;
+    .container {
+      height: 510px;
+      .container-background {
+        background     : url("@@routes.cssImages@@hero-background-mobile.jpg") center bottom no-repeat;
+        height         : 510px;
+        background-size: cover;
+        margin-top     : 0;
+        .overlay-text {
+          top      : auto;
+          bottom   : 145px;
+          left     : -55px;
+          transform: scale(.55);
+        }
+      }
+      .container-content {
+        top        : 25px;
+        font-size  : 16px;
+        line-height: 16px;
+        h2 {
+          font-size  : 30px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+#section-videos {
+  background: #82297e;
+  color     : #fff;
+  .video-preview {
+    margin: 40px 20px 0;
+  }
+  @media (max-width: 799px) {
+    .video-preview {
+      margin: 20px 0;
+    }
+  }
+}
+#section-features-security {
+  .content {
+    margin-bottom: 0;
+  }
+}
+#section-features-security-list {
+  background: #fff url("@@routes.cssImages@@section-features-security-list-background.jpg") center bottom no-repeat;
+  .feature-item {
+    font-family   : "HPSimplifiedLight";
+    display       : inline-block;
+    text-align    : left;
+    vertical-align: top;
+    font-size     : 16px;
+    line-height   : 26px;
+    margin-bottom : 30px;
+    float         : left;
+    h5 {
+      font-family: "HPSimplified";
+      font-size  : 16px;
+      line-height: 26px;
+      font-weight: normal;
+    }
+    p {
+      margin: auto;
+    }
+  }
+  .content-left {
+    padding-bottom: 280px;
+  }
+  .content-right {
+    text-align    : left;
+    padding-bottom: 280px;
+    h3 {
+      margin    : 20px 0;
+      text-align: center;
+    }
+  }
+  @media (max-width: 1279px) {
+    .content-left {
+      padding-bottom: initial;
+    }
+    .content-right {
+      padding-bottom: 300px;
+    }
+  }
+  @media (max-width: 799px) {
+    background: #fff url("@@routes.cssImages@@section-features-security-list-background-mobile.jpg") center bottom no-repeat;
+    .feature-item {
+      text-align: center;
+    }
+    .content-left {
+      padding-bottom: initial;
+    }
+    .content-right {
+      text-align    : center;
+      padding-bottom: 210px;
+      h3 {
+        font-size  : 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+#section-jetadvantage {
+  background: #e7e7e7 url("@@routes.cssImages@@section-jetadvantage-background.jpg") center bottom no-repeat;
+  .overlay-text {
+    color         : #fff;
+    text-align    : left;
+    position      : absolute;
+    bottom        : 170px;
+    left          : -590px;
+    margin-left   : 50%;
+    font-size     : 20px;
+    line-height   : 0.95em;
+    letter-spacing: -1.0px;
+    transform     : rotate(-23deg);
+    .large {
+      font-family   : "HPSimplified";
+      font-size     : 65px;
+      line-height   : 65px;
+      font-weight   : bold;
+      margin-left   : -4px;
+      letter-spacing: -3px;
+    }
+    .medium {
+      font-family: "HPSimplified";
+      font-size  : 30px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+  }
+  h3 {
+    margin-bottom: 70px;
+  }
+  .container-body {
+    float        : left;
+    margin-bottom: 450px;
+  }
+  @media (max-width: 1279px) {
+    background    : #e7e7e7 url("@@routes.cssImages@@section-jetadvantage-background.jpg") -540px bottom no-repeat;
+    padding-bottom: 350px;
+    .overlay-text {
+      margin-left: 0;
+      left       : 65px;
+    }
+    .container-body {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 799px) {
+    background    : #f0f0f0 url("@@routes.cssImages@@section-jetadvantage-background-mobile.jpg") center bottom no-repeat;
+    padding-bottom: 160px;
+    .overlay-text {
+      bottom        : 50px;
+      margin-left   : 50%;
+      left          : -176px;
+      font-size     : 12px;
+      letter-spacing: 0;
+      .large {
+        font-size  : 40px;
+        line-height: 40px;
+      }
+      .medium {
+        font-size: 20px;
+      }
+    }
+    .container-body {
+      float: initial;
+    }
+  }
+}
+#section-report {
+  background: url("@@routes.cssImages@@section-report-background.jpg") center bottom no-repeat;
+  min-height: 550px;
+  .content-body {
+    text-align : left;
+    margin-left: 600px;
+  }
+  @media (max-width: 1279px) {
+    .content {
+      margin-top: 25px;
+    }
+    .content-body {
+      margin-left: 315px;
+    }
+  }
+  @media (max-width: 799px) {
+    background: url("@@routes.cssImages@@section-report-background-mobile.jpg") center bottom no-repeat;
+    min-height: 365px;
+    h2 {
+      max-width: 300px;
+      margin   : 0 auto;
+      br,
+      br:after {
+        content: ' ';
+      }
+    }
+    .content-body {
+      text-align   : center;
+      margin-left  : auto;
+      margin-bottom: 190px;
+    }
+  }
+}
+#section-printers {
+  .content {
+    margin-bottom: 0;
+  }
+}
+#section-printers-list {
+  .content {
+    width     : 1100px;
+    margin-top: 0;
+  }
+  .hpMzrSlider-slider-nav {
+    top: 170px;
+  }
+  .product-item {
+    font-family   : "HPSimplifiedLight";
+    display       : inline-block;
+    text-align    : left;
+    width         : 290px;
+    margin        : 0; // 20px;
+    vertical-align: top;
+    font-size     : 16px;
+    line-height   : 26px;
+    .image-product {
+      img {
+        width: 100%;
+      }
+    }
+    h5 {
+      font-family: "HPSimplified";
+      font-weight: normal;
+      font-size  : 16px;
+      line-height: 26px;
+      margin-top : 15px;
+    }
+    .price {
+      font-family   : "HPSimplified";
+
+      // font-size  : 28px;
+      // line-height: 36px;
+      // margin     : 10px auto;
+      font-size     : 16px;
+      color         : #000;
+      line-height   : 1em;
+      margin        : auto;
+      vertical-align: initial;
+    }
+    .page-rate {
+      &:before {
+        content   : '';
+        display   : inline-block;
+        background: url("@@routes.cssImages@@section-printers-list-icon-ppm.png") left bottom no-repeat;
+        width     : 38px;
+        height    : 20px;
+      }
+    }
+    ul {
+      margin-left: 1em;
+      li {
+
+      }
+    }
+    .button {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 1279px) {
+    .content {
+      width: 90%;
+    }
+  }
+  @media (max-width: 799px) {
+    .content {
+      width : 100%;
+      margin: 0;
+    }
+    .product-item {
+      width     : 65%;
+      max-width : 290px;
+      text-align: center;
+      ul {
+        list-style-position: inside;
+      }
+    }
+  }
+}
+#section-printers-full {
+  color     : #fff;
+  background: #818181;
+  .content {
+    margin: 65px auto;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 799px) {
+    .content {
+      width : 90%;
+      margin: 50px 5%;
+    }
+  }
+}
+#section-resellers {
+  .content {
+    text-align   : left;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size  : 28px;
+    line-height: 28px;
+    font-weight: normal;
+    margin     : 0 auto 10px;
+  }
+  h3 {
+    font-size  : 16px;
+    line-height: 18px;
+    font-weight: normal;
+    margin     : 0 auto 10px;
+  }
+  @media (max-width: 799px) {
+    .content {
+      width     : 90%;
+      margin    : 25px 5% 0;
+      text-align: center;
+    }
+    h2 {
+      font-size  : 19px;
+      line-height: 20px;
+    }
+    h3 {
+      font-size  : 12px;
+      line-height: 14px;
+    }
+  }
+}
+#section-resellers-list {
+  .content {
+    margin-top   : 0;
+    margin-bottom: 40px;
+  }
+  .reseller-item {
+    font-family   : "HPSimplified";
+    font-weight   : normal;
+    display       : inline-block;
+    margin        : 0 20px;
+    vertical-align: middle;
+    font-size     : 21px;
+    line-height   : 24px;
+    width: 140px;
+    img {
+      width: 100%;
+    }
+  }
+  @media (max-width: 799px) {
+    .reseller-item {
+      width      : 25%;
+      margin     : 20px;
+      font-size  : 12px;
+      line-height: 14px;
+    }
+    .reseller-item-last {
+      width : 100%;
+      margin: 0 auto;
+      br {
+        content: ' ';
+        &:after {
+          content: ' ';
+        }
+      }
+    }
+  }
+}
+#section-footnotes {
+  .content {
+    font-family  : "HPSimplified";
+    text-align   : left;
+    color        : #5a5a5a;
+    font-size    : 12px;
+    line-height  : 14px;
+    margin       : 0 auto;
+    padding      : 20px 0;
+    border-top   : 1px solid #a1a0a0;
+    border-bottom: 1px solid #a1a0a0;
+    a {
+      color: #007dba;
+    }
+  }
+  @media (max-width: 799px) {
+    .content {
+      width : 100%;
+      margin: 20px 0;
+      .footnote {
+        width : 90%;
+        margin: 0 5%;
+      }
+    }
+  }
+}
+.modal {
+  button.close {
+    opacity : 1;
+    position: absolute;
+    top     : 10px;
+    right   : 10px;
+    &:before {
+      content    : '\f041';
+      font-family: 'HPIcons';
+      font-size  : 25px;
+      line-height: 25px;
+      color      : #0096d6;
+    }
+  }
+}
+.contactUsContainer {
+  // margin  : -41px 0 0;
+  position: absolute;
+  right   : 0;
+  overflow: visible;
+  z-index : 20;
+}
+.contactUsContainer:hover {
+  a.criticalButton {
+    border-bottom-left-radius: 0;
+  }
+}
+a.criticalButton {
+  line-height          : 36px !important;
+  padding              : 0 15px;
+  color                : #fff !important;
+  background-color     : #d7410b;
+  overflow             : hidden;
+  font-size            : 16px;
+  font-weight          : bold;
+  -moz-border-radius   : 0 4px 0 4px;
+  -webkit-border-radius: 0 4px 0 4px;
+  -khtml-border-radius : 0 4px 0 4px;
+  border-radius        : 0 4px 0 4px;
+  display              : inline-block;
+  zoom                 : 1;
+  *display             : inline;
+  max-width            : 90px;
+}
+a.criticalButton:hover {
+  background-color: #c1401a;
+  text-decoration : none !important;
+}
+a.criticalButton:visited {
+  text-decoration: none !important;
+  color          : #ffffff!important;
+}
+.dropBack {
+  background   : url("@@routes.cssImages@@contactus_drop.png") top right no-repeat;
+  padding-right: 58px !important;
+  position     : relative;
+  z-index      : 20;
+}
+.hideMe {
+  display: none;
+}
+.dropExpand {
+  background: #fff;
+  border    : 2px solid #5a5a5a;
+  border-top: 0;
+  z-index   : 20;
+  position  : relative;
+  margin-top: -3px;
+}
+.dropExpand a {
+  font-size    : 16px;
+  line-height  : 22px;
+  border-bottom: 0 solid #ccc;
+  padding      : 8px 20px 9px 0;
+  display      : block;
+  color        : #000 !important;
+  text-indent  : 25px;
+}
+.dropExpand a:hover {
+  background-color: #d7410b;
+  color           : #fff !important;
+  cursor          : pointer;
+}

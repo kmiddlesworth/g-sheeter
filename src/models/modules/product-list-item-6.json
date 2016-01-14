@@ -1,0 +1,18 @@
+{
+  "product-name": "##section-printers-list-item6-name##",
+  "product-image-name": "section-printers-list-product-m606x.png",
+  "product-image-link": "http://store.hp.com/us/en/pdp/business-solutions/hp-laserjet-enterprise-m606x?jumpid=cp_r163_us/en/ips/secure_printing/entlaserjet/m606ximg",
+  "product-price": "##section-printers-list-item6-price##",
+  "product-page-rate": "##section-printers-list-item6-page-rate##",
+  "product-button": "##section-printers-list-item6-button##",
+  "product-button-link": "http://store.hp.com/us/en/pdp/business-solutions/hp-laserjet-enterprise-m606x?jumpid=cp_r163_us/en/ips/secure_printing/entlaserjet/m606x",
+  "product-details": [{
+    "product-detail": "##section-printers-list-item6-detail1##"
+  }, {
+    "product-detail": "##section-printers-list-item6-detail2##"
+  }, {
+    "product-detail": "##section-printers-list-item6-detail3##"
+  }, {
+    "product-detail": "##section-printers-list-item6-detail4##"
+  }]
+}
