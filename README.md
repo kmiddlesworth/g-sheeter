@@ -149,6 +149,6 @@ Main g-sheeter class.
 	* `rowsToObject` - `string` OR `function` OR `object` - Determine how the returning array in the callback shoud be converted into an object instead of the default array
 		* when `string` - builds whole row key from matching row item label
 		* when `function` - builds whole row key from custom function - see example
-		* when 'object' - each key of this object must be `string` or `function`, and the keys supplied should match *ALL* Google Sheet tab names
+		* when `object` - each key of this object must be `string` or `function`, and the keys supplied should match *ALL* Google Sheet tab names
 
 
