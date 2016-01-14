@@ -35,7 +35,7 @@ sheet.getData(
 ### Get all tabs w/ authentication
 ```js
 //node modules and global configs
-var gSheeter = require('./lib/constructor'),
+var gSheeter = require('g-sheeter'),
 	googleService = require('[path to service file]');
 
 var sheet = gSheeter(
@@ -128,7 +128,7 @@ _Note: When using the tab-specific method, be sure to specify every tab in the o
 
 ## API
 
-### `gSheeter'
+### `gSheeter`
 Main g-sheeter class.
 
 ### `new gSheeter(key, auth, options)`
