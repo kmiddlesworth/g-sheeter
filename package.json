@@ -1,6 +1,6 @@
 {
   "name": "g-sheeter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Google Sheets update and read tool",
   "main": "index.js",
   "scripts": {
